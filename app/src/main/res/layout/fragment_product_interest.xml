@@ -5,9 +5,8 @@
               android:layout_height="match_parent">
 
     <TextView
-            android:text="Collar Especial San Valentín"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:id="@+id/textView2"/>
+            android:layout_height="wrap_content" android:id="@+id/tvName"/>
     <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -22,7 +21,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="textMultiLine"
                     android:ems="10"
-                    android:id="@+id/editText" android:hint="Escribir un mensaje..." android:minHeight="200dp"
+                    android:id="@+id/etMessage" android:hint="Escribir un mensaje..." android:minHeight="200dp"
                     android:gravity="top" android:layout_marginTop="10dp"/>
             <CheckBox
                     android:text="Compartir mi número de teléfono"
@@ -31,7 +30,8 @@
             <Button
                     android:text="Enviar"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/btSend" android:layout_marginTop="50dp"/>
+                    android:layout_height="wrap_content" android:id="@+id/btSend" android:layout_marginTop="50dp"
+                    android:enabled="false"/>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

@@ -5,9 +5,8 @@
               android:layout_height="match_parent">
 
     <TextView
-            android:text="Collar Especial San Valentín"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:id="@+id/textView4"/>
+            android:layout_height="wrap_content" android:id="@+id/tvName"/>
     <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -15,33 +14,36 @@
                       android:orientation="vertical">
             <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="400dp" app:srcCompat="@android:color/holo_purple"
-                    android:id="@+id/imageView"/>
-            <LinearLayout android:layout_width="match_parent"
-                          android:layout_height="wrap_content"
-                          android:orientation="horizontal">
-                <ImageView
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="100dp" app:srcCompat="@android:color/holo_blue_dark"/>
-                <ImageView
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="100dp" app:srcCompat="@android:color/holo_blue_bright"/>
-                <ImageView
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="100dp" app:srcCompat="@android:color/holo_blue_light"/>
+                    android:layout_height="400dp"
+                    android:id="@+id/ivImage" android:scaleType="centerCrop" android:tooltipText="Toque para ver más"/>
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" android:gravity="end" android:layout_marginTop="10dp"
+                    android:paddingHorizontal="20dp">
+                <TextView
+                        android:text="Costo:"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/textView4" android:layout_gravity="end"
+                        android:layout_marginEnd="5dp"/>
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/tvCost" android:textAlignment="textEnd"
+                />
             </LinearLayout>
             <TextView
-                    android:text="Costo: $300.0"
+                    android:text="Descripción:"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/textView5" android:textAlignment="textEnd"
-                    android:layout_marginTop="20dp"/>
+                    android:layout_height="wrap_content" android:id="@+id/textView6" android:paddingHorizontal="20dp"
+            />
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/tvDescription" android:minHeight="100dp"
+                    android:paddingHorizontal="20dp"/>
             <Button
                     android:text="Contactar"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/btContact"/>
+                    android:layout_height="wrap_content" android:id="@+id/btContact" android:enabled="false"/>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

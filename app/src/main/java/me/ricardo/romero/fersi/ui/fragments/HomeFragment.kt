@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.NavHostFragment
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -24,8 +25,10 @@ class HomeFragment : Fragment(), Bindable {
     lateinit var productAdapter: ProductAdapter
     val disposables = CompositeDisposable()
 
-    fun goToDetail() {
-        NavHostFragment.findNavController(this).navigate(R.id.action_goToProductDetail)
+    fun goToDetail(id: String) {
+        NavHostFragment.findNavController(this).navigate(R.id.action_goToProductDetail, bundleOf(
+            Pair("id", id)
+        ))
     }
 
     override fun bindViewModel() {
@@ -37,12 +40,19 @@ class HomeFragment : Fragment(), Bindable {
                         productAdapter.changeDataSet(it)
                     }
             )
+            add(
+                productAdapter
+                    .itemClicks
+                    .subscribe {
+                        goToDetail(it.id)
+                    }
+            )
         }
 
     }
 
-    override fun onStop() {
-        super.onStop()
+    override fun onDetach() {
+        super.onDetach()
         disposables.dispose()
     }
 

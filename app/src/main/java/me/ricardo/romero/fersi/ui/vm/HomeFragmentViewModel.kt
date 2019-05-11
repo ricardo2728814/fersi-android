@@ -20,9 +20,8 @@ class HomeFragmentViewModel(
     fun fetchProducts() {
         disposables.apply {
             add(
-                productService.getProductsWithImages().subscribe { ps ->
+                productService.getProductsWithMainImage().subscribe { ps ->
                     products.onNext(ps)
-                    Log.d("TEST", ps.size.toString())
                 }
             )
         }
