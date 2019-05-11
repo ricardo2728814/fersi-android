@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "870989201194",
+    "firebase_url": "https://fersi-app.firebaseio.com",
+    "project_id": "fersi-app",
+    "storage_bucket": "fersi-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:870989201194:android:ebe6f93c809e8cfc",
+        "android_client_info": {
+          "package_name": "me.ricardo.romero.fersi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "870989201194-uho4gvm5ppa2jn3o6o2j31i6h83l2jub.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqwVH21IloVe0UBjulmFsZPMS6XQ1PWgs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "870989201194-uho4gvm5ppa2jn3o6o2j31i6h83l2jub.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
